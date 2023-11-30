@@ -1,0 +1,13 @@
+{
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "compressed",
+      "extensionName": ".css",
+      "savePath": "/assets/css",
+      "savePathReplacementPairs": null,
+      "generateMap": false
+    }
+  ],
+  "liveSassCompile.settings.includeItems": ["/assets/scss/theme.scss"],
+  "prettier.printWidth": 180
+}

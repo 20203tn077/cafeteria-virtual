@@ -1,0 +1,183 @@
+// scss-docs-start import-stack
+// Configuration
+@import "../../lib/bootstrap/scss/functions";
+@import "../../lib/bootstrap/scss/variables";
+@import "../../lib/bootstrap/scss/variables-dark";
+
+$paragraph-margin-bottom: 0;
+$headings-margin-bottom:  0;
+$hr-margin-y:             0;
+$alert-margin-bottom:     0;
+$card-spacer-y:           $spacer * 0.5;
+$card-spacer-x:           $spacer * 0.5;
+$card-title-spacer-y:     $spacer * 0.25;
+$border-radius:           0.25rem;
+$border-radius-sm:        0.25rem;
+$border-radius-lg:        0.25rem;
+$border-radius-xl:        0.25rem;
+$border-radius-xxl:       0.25rem;
+$border-radius-pill:      50rem;
+$min-contrast-ratio:      3.5;
+
+$blue:    #3672CC;
+$indigo:  #6610f2;
+$purple:  #6f42c1;
+$pink:    #d63384;
+$red:     #dc3545;
+$orange:  #fd7e14;
+$yellow:  #ffc107;
+$green:   #309879;
+$teal:    #20c997;
+$cyan:    #0dcaf0;
+
+$primary:       $blue;
+$secondary:     $gray-600;
+$success:       $green;
+$info:          $cyan;
+$warning:       $yellow;
+$danger:        $red;
+$light:         $gray-100;
+$dark:          $gray-900;
+// scss-docs-end theme-color-variables
+
+// scss-docs-start theme-colors-map
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+);
+
+@import "../../lib/bootstrap/scss/variables";
+@import "../../lib/bootstrap/scss/variables-dark";
+@import "../../lib/bootstrap/scss/maps";
+@import "../../lib/bootstrap/scss/mixins";
+
+$utilities: (
+  "viewport-width": (
+    property: width,
+    class: vw,
+    values: (100: 100dvw)
+  ),
+  "min-viewport-width": (
+    property: min-width,
+    class: min-vw,
+    values: (100: 100dvw)
+  ),
+  "viewport-height": (
+    property: height,
+    class: vh,
+    values: (100: 100dvh)
+  ),
+  "min-viewport-height": (
+    property: min-height,
+    class: min-vh,
+    values: (100: 100dvh)
+  )
+);
+
+@import "../../lib/bootstrap/scss/utilities";
+    // Layout & components
+@import "../../lib/bootstrap/scss/root";
+@import "../../lib/bootstrap/scss/reboot";
+@import "../../lib/bootstrap/scss/type";
+@import "../../lib/bootstrap/scss/images";
+@import "../../lib/bootstrap/scss/containers";
+@import "../../lib/bootstrap/scss/grid";
+@import "../../lib/bootstrap/scss/tables";
+@import "../../lib/bootstrap/scss/forms";
+@import "../../lib/bootstrap/scss/buttons";
+@import "../../lib/bootstrap/scss/transitions";
+@import "../../lib/bootstrap/scss/dropdown";
+@import "../../lib/bootstrap/scss/button-group";
+@import "../../lib/bootstrap/scss/nav";
+@import "../../lib/bootstrap/scss/navbar";
+@import "../../lib/bootstrap/scss/card";
+@import "../../lib/bootstrap/scss/accordion";
+@import "../../lib/bootstrap/scss/breadcrumb";
+@import "../../lib/bootstrap/scss/pagination";
+@import "../../lib/bootstrap/scss/badge";
+@import "../../lib/bootstrap/scss/alert";
+@import "../../lib/bootstrap/scss/progress";
+@import "../../lib/bootstrap/scss/list-group";
+@import "../../lib/bootstrap/scss/close";
+@import "../../lib/bootstrap/scss/toasts";
+@import "../../lib/bootstrap/scss/modal";
+@import "../../lib/bootstrap/scss/tooltip";
+@import "../../lib/bootstrap/scss/popover";
+@import "../../lib/bootstrap/scss/carousel";
+@import "../../lib/bootstrap/scss/spinners";
+@import "../../lib/bootstrap/scss/offcanvas";
+@import "../../lib/bootstrap/scss/placeholders";
+
+// Helpers
+@import "../../lib/bootstrap/scss/helpers";
+
+// Utilities
+@import "../../lib/bootstrap/scss/utilities/api";
+// scss-docs-end import-stack
+
+.btn {
+  @extend .text-uppercase;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+::-webkit-resizer {
+  display: none;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+#loader {
+  background-color: white;
+  position: fixed;
+  width: 100dvw;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1024;
+
+  &.loader-hidden {
+    animation: fadeOut 0.5s ease forwards;
+  }
+}
+
+
+@keyframes fadeOut {
+  0% {
+      display: flex;
+      opacity: 1;
+  }
+
+  99% {
+      display: flex;
+      opacity: 0;
+  }
+
+  100% {
+      display: none;
+      opacity: 0;
+  }
+}
+
+@font-face {
+  font-family: "Apple Color Emoji";
+  src:
+    url("../fonts/AppleColorEmoji.ttf") format("opentype")
+}
+
+.emoji {
+  font-family: "Apple Color Emoji";
+}

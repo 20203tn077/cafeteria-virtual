@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedidos | Cafetería virtual</title>
+  <link rel="shortcut icon" href="../../../assets/images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../../../assets/css/theme.css">
+  <link rel="stylesheet" href="../../../lib/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../../lib/notyf/css/notyf.min.css">
+  <script defer src="../../../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script defer src="../../../lib/notyf/js/notyf.min.js"></script>
+  <script defer type="module" src="../../controllers/orders.controller.js"></script>
+  <script defer type="module" src="../../controllers/notification-button.controller.js"></script>
+  <script defer type="module" src="../../controllers/basket-button.controller.js"></script>
+  <script defer type="module" src="../../controllers/loader.controller.js"></script>
+  <script defer type="module" src="../../controllers/toast.controller.js"></script>
+</head>
+<body class="d-flex flex-column vh-100 bg-light">
+  <div id="loader">
+    <div class="spinner-border text-success" role="status" style="width: 4rem; height: 4rem;">
+      <span class="visually-hidden">Cargando...</span>
+    </div>
+  </div>
+  <nav class="navbar navbar-expand navbar-dark bg-success shadow sticky-top">
+    <div class="container-fluid justify-content-start">
+      <span class="navbar-brand">Pedidos</span>
+      <a class="navbar-brand ms-auto" href="./notifications.html">
+        <div class="position-relative">
+          <i class="bi bi-bell"></i>
+          <span id="notificationBadge" class="position-absolute top-0 start-100 translate-middle p-1 badge rounded-pill bg-danger d-none">
+            <small><small class="d-block" id="notificationCounter">2</small></small>
+            <span class="visually-hidden">Notificaciones</span>
+          </span>
+        </div>
+      </a>
+      <a class="navbar-brand" href="./basket.html">
+        <div class="position-relative">
+          <i class="bi bi-basket"></i>
+          <span id="basketBadge" class="position-absolute top-0 start-100 translate-middle p-1 badge rounded-pill bg-danger d-none">
+            <small><small class="d-block" id="basketCounter">2</small></small>
+            <span class="visually-hidden">Productos en el pedido</span>
+          </span>
+        </div>
+      </a>
+    </div>
+  </nav>
+  <div class="container p-3 flex-grow-1 overflow-y-auto">
+    <div class="vstack gap-3" id="orderContainer"></div>
+  </div>
+  <nav class="navbar navbar-expand p-2 bg-white shadow sticky-bottom">
+    <div class="container-fluid justify-content-around">
+      <a href="./food.html" class="text-decoration-none d-flex flex-column text-center lh-1 text-body-secondary">
+        <h5><i class="bi bi-cup"></i></h5>
+        <small><small>Comida</small></small>
+      </a>
+      <a href="#" class="text-decoration-none d-flex flex-column text-center lh-1 text-body">
+        <h5><i class="bi bi-clipboard-fill"></i></h5>
+        <small><small class="fw-bold">Pedidos</small></small>
+      </a>
+      <a href="./account.html" class="text-decoration-none d-flex flex-column text-center lh-1 text-body-secondary">
+        <h5><i class="bi bi-person"></i></h5>
+        <small><small>Cuenta</small></small>
+      </a>
+    </div>
+  </nav>
+</body>
+</html>

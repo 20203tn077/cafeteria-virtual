@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuenta | Cafetería virtual</title>
+  <link rel="shortcut icon" href="../../../assets/images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../../../assets/css/theme.css">
+  <link rel="stylesheet" href="../../../lib/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../../lib/notyf/css/notyf.min.css">
+  <script defer src="../../../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script defer src="../../../lib/notyf/js/notyf.min.js"></script>
+  <script defer type="module" src="../../controllers/account.controller.js"></script>
+  <script defer type="module" src="../../controllers/notification-button.controller.js"></script>
+  <script defer type="module" src="../../controllers/loader.controller.js"></script>
+  <script defer type="module" src="../../controllers/toast.controller.js"></script>
+</head>
+<body class="d-flex flex-column vh-100 bg-light">
+  <div id="loader">
+    <div class="spinner-border text-success" role="status" style="width: 4rem; height: 4rem;">
+      <span class="visually-hidden">Cargando...</span>
+    </div>
+  </div>
+  <nav class="navbar navbar-expand navbar-dark bg-success shadow sticky-top">
+    <div class="container-fluid justify-content-start">
+      <span class="navbar-brand">Cuenta</span>
+      <a class="navbar-brand ms-auto" href="./notifications.html">
+        <div class="position-relative">
+          <i class="bi bi-bell"></i>
+          <span id="notificationBadge" class="position-absolute top-0 start-100 translate-middle p-1 badge rounded-pill bg-danger d-none">
+            <small><small class="d-block" id="notificationCounter">2</small></small>
+            <span class="visually-hidden">Notificaciones</span>
+          </span>
+        </div>
+      </a>
+    </div>
+  </nav>
+  <div class="container p-3 flex-grow-1 overflow-y-auto">
+    <div class="vstack gap-3">
+      <div class="card shadow-sm position-relative" style="margin-top: 40px;">
+        <div class="card-body">
+          <div class="position-absolute top-0 start-50 translate-middle bg-white border rounded-pill text-secondary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-person-circle opacity-25" viewBox="0 0 16 16">
+              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+              <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+            </svg>
+          </div>
+          <div class="vstack gap-3" style="margin-top: 40px;">
+            <div class="text-center">
+              <h4 id="nameContainer"></h4>
+              <h6 class="text-primary" id="roleContainer"></h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card shadow-sm">
+        <div class="card-body vstack gap-3">
+          <div>
+            <small><i class="bi bi-envelope me-2"></i>Correo electrónico</small>
+            <p class="fw-medium" id="emailContainer"></p>
+          </div>
+          <div>
+            <small><i class="bi bi-person me-2"></i>Nombre de usuario</small>
+            <p class="fw-medium" id="usernameContainer"></p>
+          </div>
+          <div>
+            <small><i class="bi bi-clock me-2"></i>Horarios de entrega</small>
+            <p class="fw-medium" class="pre-line" id="scheduleContainer"></p>
+          </div>
+          <div>
+            <small><i class="bi bi-geo-alt me-2"></i>Lugares de entrega</small>
+            <p class="fw-medium" class="pre-line" id="locationsContainer"></p>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-primary btn-lg shadow-sm"><i class="bi bi-pencil-square me-2"></i>Modificar datos</button>
+      <a href="../login.html" class="btn btn-danger btn-lg shadow-sm"><i class="bi bi-box-arrow-right me-2"></i>Cerrar sesión</a>
+    </div>
+  </div>
+  <nav class="navbar navbar-expand p-2 bg-white shadow sticky-bottom">
+    <div class="container-fluid justify-content-around">
+      <a href="./products.html" class="text-decoration-none d-flex flex-column text-center lh-1 text-body-secondary">
+        <h5><i class="bi bi-cup"></i></h5>
+        <small><small>Productos</small></small>
+      </a>
+      <a href="./orders.html" class="text-decoration-none d-flex flex-column text-center lh-1 text-body-secondary">
+        <h5><i class="bi bi-clipboard"></i></h5>
+        <small><small>Pedidos</small></small>
+      </a>
+      <a href="#" class="text-decoration-none d-flex flex-column text-center lh-1 text-body">
+        <h5><i class="bi bi-person-fill"></i></h5>
+        <small><small class="fw-bold">Cuenta</small></small>
+      </a>
+    </div>
+  </nav>
+</body>
+</html>

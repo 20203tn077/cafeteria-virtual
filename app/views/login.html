@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar sesión | Cafetería virtual</title>
+  <link rel="shortcut icon" href="../../assets/images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../../assets/css/theme.css">
+  <link rel="stylesheet" href="../../lib/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../lib/notyf/css/notyf.min.css">
+  <script defer src="../../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script defer src="../../lib/notyf/js/notyf.min.js"></script>
+  <script defer type="module" src="../controllers/login.controller.js"></script>
+  <script defer type="module" src="../controllers/init.controller.js"></script>
+  <script defer type="module" src="../controllers/loader.controller.js"></script>
+  <script defer type="module" src="../controllers/toast.controller.js"></script>
+</head>
+<body class="d-flex flex-column vh-100 bg-light">
+  <div id="loader">
+    <div class="spinner-border text-success" role="status" style="width: 4rem; height: 4rem;">
+      <span class="visually-hidden">Cargando...</span>
+    </div>
+  </div>
+  <div class="container p-3 flex-grow-1 overflow-y-auto">
+    <form id="loginForm" class="vstack gap-3">
+      <img class="w-50 mx-auto" src="../../assets/images/logo.svg" alt="logo">
+      <h3>Inicio de sesión</h3>
+      <div class="form-floating">
+        <input type="text" class="form-control" id="usernameInput" placeholder="Nombre de usuario">
+        <label for="usernameInput"><i class="bi bi-person me-2"></i>Usuario</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control" id="passwordInput" placeholder="Contraseña">
+        <label for="passwordInput"><i class="bi bi-lock me-2"></i>Contraseña</label>
+      </div>
+      <a href="#" id="initTrigger">¿Olvidaste tu contraseña?</a>
+      <button class="btn btn-primary btn-lg shadow-sm"><i class="bi bi-box-arrow-in-right me-2"></i>Ingresar</button>
+      <a href="./register.html" class="btn btn-success btn-lg shadow-sm"><i class="bi bi-person-add me-2"></i>Crear cuenta</a>
+    </form>
+  </div>
+</body>
+</html>

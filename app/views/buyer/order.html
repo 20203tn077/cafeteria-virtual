@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuenta | Cafetería virtual</title>
+  <link rel="shortcut icon" href="../../../assets/images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../../../assets/css/theme.css">
+  <link rel="stylesheet" href="../../../lib/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../../lib/notyf/css/notyf.min.css">
+  <script defer src="../../../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script defer src="../../../lib/notyf/js/notyf.min.js"></script>
+  <script defer type="module" src="../../controllers/buyer-order.controller.js"></script>
+  <script defer type="module" src="../../controllers/return-button.controller.js"></script>
+  <script defer type="module" src="../../controllers/loader.controller.js"></script>
+  <script defer type="module" src="../../controllers/toast.controller.js"></script>
+</head>
+<body class="d-flex flex-column vh-100 bg-light">
+  <div id="loader">
+    <div class="spinner-border text-success" role="status" style="width: 4rem; height: 4rem;">
+      <span class="visually-hidden">Cargando...</span>
+    </div>
+  </div>
+  <nav class="navbar navbar-expand navbar-dark bg-success shadow sticky-top">
+    <div class="container-fluid justify-content-start">
+      <span class="navbar-brand" id="returnButton"><i class="bi bi-arrow-left"></i></span>
+      <span class="navbar-brand">Detalle de pedido</span>
+    </div>
+  </nav>
+  <div class="container p-3 flex-grow-1 overflow-y-auto">
+    <div class="vstack gap-3">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <div class="card-title d-flex justify-content-between">
+            <h5>Pedido #<span id="orderNumberContainer"></span></h5>
+            <span class="fw-bold" id="statusContainer"></span>
+          </div>
+          <div class="vstack gap-2">
+            <p id="dateContainer"></p>
+            <hr>
+            <div>
+              <small><i class="bi bi-person me-2"></i>Vendedor</small>
+              <p class="fw-medium" id="sellerContainer"></p>
+            </div>
+            <div class="hstack justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <table class="table m-0 text-center align-middle">
+            <tbody id="productContainer">
+            </tbody>
+            <tfoot>
+              <tr>
+                <td class="text-end fw-bold border-0">Total:</td>
+                <td class="text-end fw-bold border-0">$<span id="totalContainer"></span></td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+      <a href="./chat.html" class="btn btn-primary btn-lg shadow-sm"><i class="bi bi-chat me-2"></i>Abrir chat</a>
+      <button id="cancelOrderButton" class="btn btn-danger btn-lg shadow-sm d-none"><i class="bi bi-x-lg me-2"></i>Cancelar pedido</button>
+      <form id="reviewForm" class="vstack gap-3 d-none">
+        <hr>
+        <h5>Calificar productos</h5>
+        <h3 class="hstack text-warning">
+          <i class="bi bi-star score-button me-2"></i>
+          <i class="bi bi-star score-button me-2"></i>
+          <i class="bi bi-star score-button me-2"></i>
+          <i class="bi bi-star score-button me-2"></i>
+          <i class="bi bi-star score-button me-2"></i>
+        </h3>
+        <div class="form-floating">
+          <textarea class="form-control" placeholder="Comentarios" id="commentInput" style="height: 100px"></textarea>
+          <label for="commentInput">Comentarios*</label>
+        </div>
+        <button class="btn btn-primary btn-lg shadow-sm"><i class="bi bi-check-lg me-2"></i>Enviar calificación</button>
+      </form>
+    </div>
+    <div></div>
+  </div>
+</body>
+</html>

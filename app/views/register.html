@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crear cuenta | Cafetería virtual</title>
+  <link rel="shortcut icon" href="../../assets/images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../../assets/css/theme.css">
+  <link rel="stylesheet" href="../../lib/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../lib/notyf/css/notyf.min.css">
+  <script defer src="../../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script defer src="../../lib/notyf/js/notyf.min.js"></script>
+  <script defer type="module" src="../controllers/return-button.controller.js"></script>
+  <script defer type="module" src="../controllers/register.controller.js"></script>
+  <script defer type="module" src="../controllers/loader.controller.js"></script>
+  <script defer type="module" src="../controllers/toast.controller.js"></script>
+</head>
+<body class="d-flex flex-column vh-100 bg-light">
+  <div id="loader">
+    <div class="spinner-border text-success" role="status" style="width: 4rem; height: 4rem;">
+      <span class="visually-hidden">Cargando...</span>
+    </div>
+  </div>
+  <nav class="navbar navbar-expand navbar-dark bg-success shadow sticky-top">
+    <div class="container-fluid justify-content-start">
+      <span class="navbar-brand" id="returnButton"><i class="bi bi-arrow-left"></i></span>
+      <span class="navbar-brand">Crear cuenta</span>
+    </div>
+  </nav>
+  <div class="container p-3 flex-grow-1 overflow-y-auto">
+    <form class="vstack gap-3" id="registerForm">
+      <div class="form-floating">
+        <input autocomplete="off" type="text" class="form-control" id="nameInput" placeholder="Nombre(s)">
+        <label for="nameInput">Nombre(s)*</label>
+      </div>
+      <div class="form-floating">
+        <input autocomplete="off" type="text" class="form-control" id="surnameInput" placeholder="Primer apellido">
+        <label for="surnameInput">Primer apellido*</label>
+      </div>
+      <div class="form-floating">
+        <input autocomplete="off" type="text" class="form-control" id="lastnameInput" placeholder="Segundo apellido">
+        <label for="lastnameInput">Segundo apellido</label>
+      </div>
+      <div class="form-floating">
+        <input autocomplete="off" type="text" class="form-control" id="emailInput" placeholder="Correo electrónico">
+        <label for="emailInput">Correo electrónico*</label>
+      </div>
+      <div class="form-floating">
+        <input autocomplete="off" type="text" class="form-control" id="usernameInput" placeholder="Nombre de usuario">
+        <label for="usernameInput">Nombre de usuario*</label>
+      </div>
+      <hr>
+      <div>
+        <p class="mb-2">¿Qué harás dentro de la aplicación?</p>
+        <input type="radio" value="Comprador" class="btn-check" name="roleRadio" id="roleRadio1" autocomplete="off" checked>
+        <label class="btn btn-outline-primary" for="roleRadio1">Comprar</label>
+        <input type="radio" value="Vendedor" class="btn-check" name="roleRadio" id="roleRadio2" autocomplete="off">
+        <label class="btn btn-outline-primary" for="roleRadio2">Vender</label>
+      </div>
+      <div class="form-floating seller-only d-none">
+        <textarea autocomplete="off" class="form-control" placeholder="Horarios de entrega" id="scheduleInput" style="height: 100px"></textarea>
+        <label for="scheduleInput">Horarios de entrega*</label>
+      </div>
+      <div class="form-floating seller-only d-none">
+        <textarea autocomplete="off" class="form-control" placeholder="Lugares de entrega" id="locationsInput" style="height: 100px"></textarea>
+        <label for="locationsInput">Lugares de entrega*</label>
+      </div>
+      <hr>
+      <div class="form-floating">
+        <input autocomplete="off" type="password" class="form-control" id="passwordInput" placeholder="Nombre de usuario">
+        <label for="passwordInput">Contraseña*</label>
+      </div>
+      <div class="form-floating">
+        <input autocomplete="off" type="password" class="form-control" id="passwordConfirmationInput" placeholder="Nombre de usuario">
+        <label for="passwordConfirmationInput">Confirmar contraseña*</label>
+      </div>
+      <button class="btn btn-primary btn-lg shadow-sm"><i class="bi bi-check-lg me-2"></i>Crear cuenta</button>
+    </form>
+  </div>
+</body>
+</html>

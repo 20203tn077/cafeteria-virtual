@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comida | Cafetería virtual</title>
+  <link rel="shortcut icon" href="../../../assets/images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../../../assets/css/theme.css">
+  <link rel="stylesheet" href="../../../lib/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../../lib/notyf/css/notyf.min.css">
+  <script defer src="../../../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script defer src="../../../lib/notyf/js/notyf.min.js"></script>
+  <script defer type="module" src="../../controllers/food.controller.js"></script>
+  <script defer type="module" src="../../controllers/notification-button.controller.js"></script>
+  <script defer type="module" src="../../controllers/basket-button.controller.js"></script>
+  <script defer type="module" src="../../controllers/loader.controller.js"></script>
+  <script defer type="module" src="../../controllers/toast.controller.js"></script>
+</head>
+<body class="d-flex flex-column vh-100 bg-light">
+  <div id="loader">
+    <div class="spinner-border text-success" role="status" style="width: 4rem; height: 4rem;">
+      <span class="visually-hidden">Cargando...</span>
+    </div>
+  </div>
+  <nav class="navbar navbar-expand navbar-dark bg-success shadow sticky-top">
+    <div class="container-fluid justify-content-start">
+      <span class="navbar-brand">Comida</span>
+      <a class="navbar-brand ms-auto" href="./notifications.html">
+        <div class="position-relative">
+          <i class="bi bi-bell"></i>
+          <span id="notificationBadge" class="position-absolute top-0 start-100 translate-middle p-1 badge rounded-pill bg-danger d-none">
+            <small><small class="d-block" id="notificationCounter">2</small></small>
+            <span class="visually-hidden">Notificaciones</span>
+          </span>
+        </div>
+      </a>
+      <a class="navbar-brand" href="./basket.html">
+        <div class="position-relative">
+          <i class="bi bi-basket"></i>
+          <span id="basketBadge" class="position-absolute top-0 start-100 translate-middle p-1 badge rounded-pill bg-danger d-none">
+            <small><small class="d-block" id="basketCounter">2</small></small>
+            <span class="visually-hidden">Productos en el pedido</span>
+          </span>
+        </div>
+      </a>
+    </div>
+  </nav>
+  <div class="container p-3 flex-grow-1 overflow-y-auto">
+    <div class="vstack gap-3" id="productContainer"></div>
+  </div>
+  <nav class="navbar navbar-expand p-2 bg-white shadow sticky-bottom">
+    <div class="container-fluid justify-content-around">
+      <a href="#" class="text-decoration-none d-flex flex-column text-center lh-1 text-body">
+        <h5><i class="bi bi-cup-fill"></i></h5>
+        <small><small class="fw-bold">Comida</small></small>
+      </a>
+      <a href="./orders.html" class="text-decoration-none d-flex flex-column text-center lh-1 text-body-secondary">
+        <h5><i class="bi bi-clipboard"></i></h5>
+        <small><small>Pedidos</small></small>
+      </a>
+      <a href="./account.html" class="text-decoration-none d-flex flex-column text-center lh-1 text-body-secondary">
+        <h5><i class="bi bi-person"></i></h5>
+        <small><small>Cuenta</small></small>
+      </a>
+    </div>
+  </nav>
+  <div class="modal" tabindex="-1" id="basketModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Pedido</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="alert alert-primary shadow-sm" role="alert">
+            Agrega productos tu pedido
+          </div>
+          <table class="table m-0 text-center align-middle">
+            <tbody>
+              <tr>
+                <td class="text-start"><span class="fw-bold">2x</span> Enchiladas</td>
+                <td>$40.00</td>
+                <td><button class="btn btn-sm btn-danger"><i class="bi bi-x-lg"></i></button></td>
+              </tr>
+              <tr>
+                <td class="text-start"><span class="fw-bold">2x</span> Enchiladas</td>
+                <td>$40.00</td>
+                <td><button class="btn btn-sm btn-danger"><i class="bi bi-x-lg"></i></button></td>
+              </tr>
+              <tr>
+                <td class="text-start"><span class="fw-bold">2x</span> Enchiladas</td>
+                <td>$40.00</td>
+                <td><button class="btn btn-sm btn-danger"><i class="bi bi-x-lg"></i></button></td>
+              </tr>
+              <tr>
+                <td class="text-start"><span class="fw-bold">2x</span> Enchiladas</td>
+                <td>$40.00</td>
+                <td><button class="btn btn-sm btn-danger"><i class="bi bi-x-lg"></i></button></td>
+              </tr>
+              <tr>
+                <td class="text-start"><span class="fw-bold">2x</span> Enchiladas</td>
+                <td>$40.00</td>
+                <td><button class="btn btn-sm btn-danger"><i class="bi bi-x-lg"></i></button></td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td class="text-end fw-bold border-0">Total:</td>
+                <td class="fw-bold border-0">$40.00</td>
+                <td class="border-0"></td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-lg btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-lg btn-primary">Pagar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

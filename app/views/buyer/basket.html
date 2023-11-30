@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedido | Cafetería virtual</title>
+  <link rel="shortcut icon" href="../../../assets/images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../../../assets/css/theme.css">
+  <link rel="stylesheet" href="../../../lib/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../../lib/notyf/css/notyf.min.css">
+  <script defer src="../../../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script defer src="../../../lib/notyf/js/notyf.min.js"></script>
+  <script defer type="module" src="../../controllers/basket.controller.js"></script>
+  <script defer type="module" src="../../controllers/return-button.controller.js"></script>
+  <script defer type="module" src="../../controllers/loader.controller.js"></script>
+  <script defer type="module" src="../../controllers/toast.controller.js"></script>
+</head>
+<body class="d-flex flex-column vh-100 bg-light">
+  <div id="loader">
+    <div class="spinner-border text-success" role="status" style="width: 4rem; height: 4rem;">
+      <span class="visually-hidden">Cargando...</span>
+    </div>
+  </div>
+  <nav class="navbar navbar-expand navbar-dark bg-success shadow sticky-top">
+    <div class="container-fluid justify-content-start">
+      <span class="navbar-brand" id="returnButton"><i class="bi bi-arrow-left"></i></span>
+      <span class="navbar-brand">Pedido</span>
+    </div>
+  </nav>
+  <div class="container p-3 flex-grow-1 overflow-y-auto">
+    <div class="vstack gap-3">
+      <div id="emptyBasketAlert" class="alert alert-primary shadow-sm d-none" role="alert">
+        Agrega productos tu pedido
+      </div>
+      <div id="productsTable" class="card shadow-sm d-none">
+        <div class="card-body">
+          <table class="table m-0 text-center align-middle">
+            <tbody id="productContainer"></tbody>
+            <tfoot>
+              <tr>
+                <td class="text-end fw-bold border-0">Total:</td>
+                <td class="fw-bold border-0">$<span id="totalContainer"></span></td>
+                <td class="border-0"></td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+      <a id="payButton" href="./payment.html" class="btn btn-primary btn-lg shadow-sm d-none"><i class="bi bi-credit-card me-2"></i>Pagar pedido</a>
+    </div>
+  </div>
+</body>
+</html>

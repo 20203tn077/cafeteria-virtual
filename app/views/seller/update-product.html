@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modificar producto | Cafetería virtual</title>
+  <link rel="shortcut icon" href="../../../assets/images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../../../assets/css/theme.css">
+  <link rel="stylesheet" href="../../../lib/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../../lib/notyf/css/notyf.min.css">
+  <script defer src="../../../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script defer src="../../../lib/notyf/js/notyf.min.js"></script>
+  <script defer type="module" src="../../controllers/return-button.controller.js"></script>
+  <script defer type="module" src="../../controllers/loader.controller.js"></script>
+  <script defer type="module" src="../../controllers/toast.controller.js"></script>
+</head>
+<body class="d-flex flex-column vh-100 bg-light">
+  <div id="loader">
+    <div class="spinner-border text-success" role="status" style="width: 4rem; height: 4rem;">
+      <span class="visually-hidden">Cargando...</span>
+    </div>
+  </div>
+  <nav class="navbar navbar-expand navbar-dark bg-success shadow sticky-top">
+    <div class="container-fluid justify-content-start">
+      <span class="navbar-brand" id="returnButton"><i class="bi bi-arrow-left"></i></span>
+      <span class="navbar-brand">Modificar producto</span>
+    </div>
+  </nav>
+  <div class="container p-3 flex-grow-1 overflow-y-auto">
+    <div class="vstack gap-3">
+      <div class="form-floating">
+        <input type="text" class="form-control" id="usernameInput" placeholder="Nombre de usuario">
+        <label for="floatingPassword">Título*</label>
+      </div>
+      <div class="form-floating">
+        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+        <label for="floatingTextarea2">Descripción*</label>
+      </div>
+      <div class="form-floating">
+        <input type="number" class="form-control" id="usernameInput" placeholder="Nombre de usuario">
+        <label for="floatingPassword">Precio*</label>
+      </div>
+      <div class="form-floating">
+        <input type="number" class="form-control" id="usernameInput" placeholder="Nombre de usuario">
+        <label for="floatingPassword">Cantidad*</label>
+      </div>
+      <button class="btn btn-outline-primary btn-lg shadow-sm"><i class="bi bi-image me-2"></i>Agregar foto</button>
+      <div class="card">
+        <img src="../../../assets/images/items/test.jpg" class="card-img" alt="...">
+        <div class="card-img-overlay p-0 d-flex align-items-end">
+          <button class="w-100 btn btn-danger btn-lg" style="height: fit-content;"><i class="bi bi-x-lg me-2"></i>Eliminar foto</button>
+        </div>
+      </div>
+      <button class="btn btn-primary btn-lg shadow-sm"><i class="bi bi-check-lg me-2"></i>Agregar producto</button>
+    </div>
+  </div>
+</body>
+</html>

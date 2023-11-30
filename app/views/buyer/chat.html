@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat | Cafetería virtual</title>
+  <link rel="shortcut icon" href="../../../assets/images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../../../assets/css/theme.css">
+  <link rel="stylesheet" href="../../../lib/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../../lib/notyf/css/notyf.min.css">
+  <script defer src="../../../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script defer src="../../../lib/notyf/js/notyf.min.js"></script>
+  <script defer type="module" src="../../controllers/chat.controller.js"></script>
+  <script defer type="module" src="../../controllers/return-button.controller.js"></script>
+  <script defer type="module" src="../../controllers/loader.controller.js"></script>
+  <script defer type="module" src="../../controllers/toast.controller.js"></script>
+</head>
+<body class="d-flex flex-column vh-100 bg-light">
+  <div id="loader">
+    <div class="spinner-border text-success" role="status" style="width: 4rem; height: 4rem;">
+      <span class="visually-hidden">Cargando...</span>
+    </div>
+  </div>
+  <nav class="navbar navbar-expand navbar-dark bg-success shadow sticky-top">
+    <div class="container-fluid justify-content-start">
+      <span class="navbar-brand" id="returnButton"><i class="bi bi-arrow-left"></i></span>
+      <span class="navbar-brand" id="nameContainer"></span>
+    </div>
+  </nav>
+  <div class="flex-grow-1 d-flex flex-column-reverse overflow-y-auto">
+    <div class="container p-3 vstack gap-3">
+      <div id="orderContainer" role="button" class="card shadow-sm">
+        <div class="card-body">
+          <div class="card-title d-flex justify-content-between">
+            <h5>Pedido #<span id="orderNumberContainer"></span></h5>
+            <span class="fw-bold" id="statusContainer"></span>
+          </div>
+          <span id="countContainer"></span>
+        </div>
+      </div>
+      <div id="messageContainer" class="vstack gap-2"></div>
+      <div id="endAlert" class="alert alert-danger shadow-sm d-none" role="alert">
+        La conversación ha finalizado
+      </div>
+    </div>
+  </div>
+  <div id="chatControls" class="container-fluid px-3 py-3 sticky-bottom bg-white shadow d-none">
+    <form id="chatForm" class="d-flex">
+      <textarea class="form-control form-control-lg fs-6 overflow-y-hidden" id="chatInput" placeholder="Escribe un mensaje" rows="1"></textarea>
+      <button class="btn btn-lg mt-auto"><i class="bi bi-send"></i></button>
+    </form>
+  </div>
+</body>
+</html>
