@@ -11,7 +11,7 @@ function init() {
   initService.addProducts()
   initService.addOrders()
 
-  notyf.success('Datos restablecidos :p')
+  notyf.success('Datos de muestra cargados')
 }
 
 initTrigger.ondblclick = init

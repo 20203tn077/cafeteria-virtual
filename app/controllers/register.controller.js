@@ -68,7 +68,7 @@ function register() {
     role === 'Vendedor' ? scheduleInput.value : undefined,
     role === 'Vendedor' ? locationsInput.value : undefined
   ))
-  toastService.setPendingMessage('Usuario registrado')
+  toastService.setPendingMessage('Cuenta creada')
   window.location.replace('./login.html')
 }
 

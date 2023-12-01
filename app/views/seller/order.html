@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cuenta | Cafetería virtual</title>
+  <title>Detalle de pedido | Cafetería virtual</title>
   <link rel="shortcut icon" href="../../../assets/images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../../../assets/css/theme.css">
   <link rel="stylesheet" href="../../../lib/bootstrap-icons/bootstrap-icons.min.css">
@@ -27,43 +27,45 @@
       <span class="navbar-brand">Detalle de pedido</span>
     </div>
   </nav>
-  <div class="container p-3 flex-grow-1 overflow-y-auto">
-    <div class="vstack gap-3">
-      <div class="card shadow-sm">
-        <div class="card-body">
-          <div class="card-title d-flex justify-content-between">
-            <h5>Pedido #<span id="orderNumberContainer"></span></h5>
-            <span class="fw-bold" id="statusContainer"></span>
-          </div>
-          <div class="vstack gap-2">
-            <p id="dateContainer"></p>
-            <hr>
-            <div>
-              <small><i class="bi bi-person me-2"></i>Comprador</small>
-              <p class="fw-medium" id="buyerContainer"></p>
+  <div class="p-3 flex-grow-1 overflow-y-auto">
+    <div class="container">
+      <div class="vstack gap-3">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <div class="card-title d-flex justify-content-between">
+              <h5>Pedido #<span id="orderNumberContainer"></span></h5>
+              <span class="fw-bold" id="statusContainer"></span>
             </div>
-            <div class="hstack justify-content-between align-items-center">
+            <div class="vstack gap-2">
+              <p id="dateContainer"></p>
+              <hr>
+              <div>
+                <small><i class="bi bi-person me-2"></i>Comprador</small>
+                <p class="fw-medium" id="buyerContainer"></p>
+              </div>
+              <div class="hstack justify-content-between align-items-center">
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="card shadow-sm">
-        <div class="card-body">
-          <table class="table m-0 text-center align-middle">
-            <tbody id="productContainer">
-            </tbody>
-            <tfoot>
-              <tr>
-                <td class="text-end fw-bold border-0">Total:</td>
-                <td class="text-end fw-bold border-0">$<span id="totalContainer"></span></td>
-              </tr>
-            </tfoot>
-          </table>
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <table class="table m-0 text-center align-middle">
+              <tbody id="productContainer">
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td class="text-end fw-bold border-0">Total:</td>
+                  <td class="text-end fw-bold border-0">$<span id="totalContainer"></span></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
         </div>
+        <a href="./chat.html" class="btn btn-primary btn-lg shadow-sm"><i class="bi bi-chat me-2"></i>Abrir chat</a>
+        <button id="nextStepButton" class="btn btn-success btn-lg shadow-sm d-none"><i class="bi bi-check-lg me-2"></i><span id="nextStepContainer"></span></button>
+        <button id="cancelOrderButton" class="btn btn-danger btn-lg shadow-sm d-none"><i class="bi bi-x-lg me-2"></i>Cancelar pedido</button>
       </div>
-      <a href="./chat.html" class="btn btn-primary btn-lg shadow-sm"><i class="bi bi-chat me-2"></i>Abrir chat</a>
-      <button id="nextStepButton" class="btn btn-success btn-lg shadow-sm d-none"><i class="bi bi-check-lg me-2"></i><span id="nextStepContainer"></span></button>
-      <button id="cancelOrderButton" class="btn btn-danger btn-lg shadow-sm d-none"><i class="bi bi-x-lg me-2"></i>Cancelar pedido</button>
     </div>
   </div>
 </body>

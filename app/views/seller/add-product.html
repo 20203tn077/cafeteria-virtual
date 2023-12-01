@@ -27,33 +27,35 @@
       <span class="navbar-brand">Agregar producto</span>
     </div>
   </nav>
-  <div class="container p-3 flex-grow-1 overflow-y-auto">
-    <form id="addProductForm" class="vstack gap-3">
-      <div class="form-floating">
-        <input autocomplete="off" type="text" class="form-control" id="titleInput" placeholder="Título">
-        <label for="titleInput">Título*</label>
-      </div>
-      <div class="form-floating">
-        <textarea autocomplete="off" class="form-control" placeholder="Descripción" id="descriptionInput" style="height: 100px"></textarea>
-        <label for="descriptionInput">Descripción*</label>
-      </div>
-      <div class="form-floating">
-        <input autocomplete="off" min="1" type="number" class="form-control" id="priceInput" placeholder="Precio">
-        <label for="priceInput">Precio*</label>
-      </div>
-      <div class="form-floating">
-        <input autocomplete="off" min="0" type="number" class="form-control" id="amountInput" placeholder="Cantidad">
-        <label for="amountInput">Cantidad*</label>
-      </div>
-      <button type="button" id="addPictureButton" class="btn btn-outline-primary btn-lg shadow-sm"><i class="bi bi-image me-2"></i>Agregar foto</button>
-      <div id="pictureCard" class="card d-none">
-        <img id="pictureImage" src="../../../assets/images/products/test.jpg" class="card-img" alt="...">
-        <div class="card-img-overlay p-0 d-flex align-items-end">
-          <button type="button" id="removePictureButton" class="w-100 btn btn-danger btn-lg" style="height: fit-content;"><i class="bi bi-x-lg me-2"></i>Eliminar foto</button>
+  <div class="p-3 flex-grow-1 overflow-y-auto">
+    <div class="container">
+      <form id="addProductForm" class="vstack gap-3">
+        <div class="form-floating">
+          <input autocomplete="off" type="text" class="form-control" id="titleInput" placeholder="Título">
+          <label for="titleInput">Título*</label>
         </div>
-      </div>
-      <button class="btn btn-primary btn-lg shadow-sm"><i class="bi bi-check-lg me-2"></i>Agregar producto</button>
-    </form>
+        <div class="form-floating">
+          <textarea autocomplete="off" class="form-control" placeholder="Descripción" id="descriptionInput" style="height: 100px"></textarea>
+          <label for="descriptionInput">Descripción*</label>
+        </div>
+        <div class="form-floating">
+          <input autocomplete="off" min="1" type="number" class="form-control" id="priceInput" placeholder="Precio">
+          <label for="priceInput">Precio*</label>
+        </div>
+        <div class="form-floating">
+          <input autocomplete="off" min="0" type="number" class="form-control" id="amountInput" placeholder="Cantidad">
+          <label for="amountInput">Cantidad*</label>
+        </div>
+        <button type="button" id="addPictureButton" class="btn btn-outline-primary btn-lg shadow-sm"><i class="bi bi-image me-2"></i>Agregar foto</button>
+        <div id="pictureCard" class="card d-none">
+          <img id="pictureImage" src="../../../assets/images/products/test.jpg" class="card-img" alt="...">
+          <div class="card-img-overlay p-0 d-flex align-items-end">
+            <button type="button" id="removePictureButton" class="w-100 btn btn-danger btn-lg" style="height: fit-content;"><i class="bi bi-x-lg me-2"></i>Eliminar foto</button>
+          </div>
+        </div>
+        <button class="btn btn-primary btn-lg shadow-sm"><i class="bi bi-check-lg me-2"></i>Agregar producto</button>
+      </form>
+    </div>
   </div>
 </body>
 </html>

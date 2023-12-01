@@ -35,46 +35,48 @@
       </a>
     </div>
   </nav>
-  <div class="container p-3 flex-grow-1 overflow-y-auto">
-    <div class="vstack gap-3">
-      <div class="card shadow-sm position-relative" style="margin-top: 40px;">
-        <div class="card-body">
-          <div class="position-absolute top-0 start-50 translate-middle bg-white border rounded-pill text-secondary">
-            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-person-circle opacity-25" viewBox="0 0 16 16">
-              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-              <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-            </svg>
-          </div>
-          <div class="vstack gap-3" style="margin-top: 40px;">
-            <div class="text-center">
-              <h4 id="nameContainer"></h4>
-              <h6 class="text-primary" id="roleContainer"></h6>
+  <div class="p-3 flex-grow-1 overflow-y-auto">
+    <div class="container">
+      <div class="vstack gap-3">
+        <div class="card shadow-sm position-relative" style="margin-top: 40px;">
+          <div class="card-body">
+            <div class="position-absolute top-0 start-50 translate-middle bg-white border rounded-pill text-secondary">
+              <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-person-circle opacity-25" viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+              </svg>
+            </div>
+            <div class="vstack gap-3" style="margin-top: 40px;">
+              <div class="text-center">
+                <h4 id="nameContainer"></h4>
+                <h6 class="text-primary" id="roleContainer"></h6>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="card shadow-sm">
-        <div class="card-body vstack gap-3">
-          <div>
-            <small><i class="bi bi-envelope me-2"></i>Correo electrónico</small>
-            <p class="fw-medium" id="emailContainer"></p>
-          </div>
-          <div>
-            <small><i class="bi bi-person me-2"></i>Nombre de usuario</small>
-            <p class="fw-medium" id="usernameContainer"></p>
-          </div>
-          <div>
-            <small><i class="bi bi-clock me-2"></i>Horarios de entrega</small>
-            <p class="fw-medium" class="pre-line" id="scheduleContainer"></p>
-          </div>
-          <div>
-            <small><i class="bi bi-geo-alt me-2"></i>Lugares de entrega</small>
-            <p class="fw-medium" class="pre-line" id="locationsContainer"></p>
+        <div class="card shadow-sm">
+          <div class="card-body vstack gap-3">
+            <div>
+              <small><i class="bi bi-envelope me-2"></i>Correo electrónico</small>
+              <p class="fw-medium" id="emailContainer"></p>
+            </div>
+            <div>
+              <small><i class="bi bi-person me-2"></i>Nombre de usuario</small>
+              <p class="fw-medium" id="usernameContainer"></p>
+            </div>
+            <div>
+              <small><i class="bi bi-clock me-2"></i>Horarios de entrega</small>
+              <p class="fw-medium" class="pre-line" id="scheduleContainer"></p>
+            </div>
+            <div>
+              <small><i class="bi bi-geo-alt me-2"></i>Lugares de entrega</small>
+              <p class="fw-medium" class="pre-line" id="locationsContainer"></p>
+            </div>
           </div>
         </div>
+        <button class="btn btn-primary btn-lg shadow-sm"><i class="bi bi-pencil-square me-2"></i>Modificar datos</button>
+        <a href="../login.html" class="btn btn-danger btn-lg shadow-sm"><i class="bi bi-box-arrow-right me-2"></i>Cerrar sesión</a>
       </div>
-      <button class="btn btn-primary btn-lg shadow-sm"><i class="bi bi-pencil-square me-2"></i>Modificar datos</button>
-      <a href="../login.html" class="btn btn-danger btn-lg shadow-sm"><i class="bi bi-box-arrow-right me-2"></i>Cerrar sesión</a>
     </div>
   </div>
   <nav class="navbar navbar-expand p-2 bg-white shadow sticky-bottom">
